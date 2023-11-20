@@ -113,11 +113,16 @@ Create a template as user_profiles.html
 ```
 STEP 7:
 Run the program using the command
+
 Python manage.py runserver 8000
+
 In the admin/ page you can view the models created
+
 And in the user_profile template page you can see the profile page of the user.
 
 OUTPUT :
+
+[django_project.pdf](https://github.com/GURUMUR/ODD2023-WT-Ex-04-Django-Models/files/13418055/django_project.pdf)
 [django_project (1).pdf](https://github.com/GURUMUR/ODD2023-WT-Ex-04-Django-Models/files/13418032/django_project.1.pdf)
 
 RESULT :
