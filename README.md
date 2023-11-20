@@ -8,14 +8,14 @@ Reference N0 : 23013514
 AIM :
 Display user's details using template-view-model in django framework.
 
-STEP 1 :
+# STEP 1 :
 Create django project and app using the following commands:
 
 Django-admin startproject mymodels
 
 Python manage.py startapp myapp
 
-STEP 2 :
+# STEP 2 :
 ```HTML
 create a user_profile models in model.py
 
@@ -28,7 +28,7 @@ class UserProfile(models.Model):
     last_name = models.CharField(max_length=100)
     email = models.EmailField()
 ```
-STEP 3 :
+# STEP 3 :
 Add the models in the admin interface using the code in admin.py
 ```HTML
 
@@ -39,7 +39,7 @@ from .models import UserProfile
 
 admin.site.register(UserProfile)
 ```
-STEP 4 :
+# STEP 4 :
 Write the function based view to render the data from the models to the template in view.py
 ```HTML
 from django.shortcuts import render
@@ -58,9 +58,10 @@ def user_profile(request):
         "lastname": user_profile.user.last_name,  # Access last name through the related User model
     }
     return render(request, 'myapp/user_profiles.html', context)
-STEP 5 :
+```
+# STEP 5 :
 Setup the url path for the templates using urls.py
-
+```html
 """mymodels URL Configuration
 
 The urlpatterns list routes URLs to views. For more information please see:
@@ -86,7 +87,7 @@ urlpatterns = [
     path('profile/', views.user_profile, name='user_profile'),
 ]
 ```
-STEP 6:
+# STEP 6:
 In settings.py file add the app created.
 
 Now do the migrations process to initiate and save the models
@@ -111,7 +112,7 @@ Create a template as user_profiles.html
 </body>
 </html>
 ```
-STEP 7:
+# STEP 7:
 Run the program using the command
 
 Python manage.py runserver 8000
@@ -120,10 +121,8 @@ In the admin/ page you can view the models created
 
 And in the user_profile template page you can see the profile page of the user.
 
-OUTPUT :
+# OUTPUT :
+![django_model_pro(2)](https://github.com/GURUMUR/ODD2023-WT-Ex-04-Django-Models/assets/144895197/ed48cd7f-d8ad-4ea4-8850-53f2e9d76132)
 
-[django_project.pdf](https://github.com/GURUMUR/ODD2023-WT-Ex-04-Django-Models/files/13418055/django_project.pdf)
-[django_project (1).pdf](https://github.com/GURUMUR/ODD2023-WT-Ex-04-Django-Models/files/13418032/django_project.1.pdf)
-
-RESULT :
+# RESULT :
 User Profile displayed successfully using django framework.
